@@ -1,0 +1,364 @@
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCouples (20220104001655)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "couples" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "father" varchar, "mother" varchar, "breed" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220104001655"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePuppies (20220104001758)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "puppies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "breed" varchar, "price" integer, "sex" varchar, "couple_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_50c7e92817"
+FOREIGN KEY ("couple_id")
+  REFERENCES "couples" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_puppies_on_couple_id" ON "puppies" ("couple_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220104001758"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-01-04 00:37:57.190414"], ["updated_at", "2022-01-04 00:37:57.190414"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCouple Create (0.6ms)[0m  [1m[32mINSERT INTO "couples" ("father", "mother", "breed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["father", "Jack"], ["mother", "Cleo"], ["breed", "Golden Retriever"], ["created_at", "2022-01-04 00:40:11.886778"], ["updated_at", "2022-01-04 00:40:11.886778"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCouple Create (0.1ms)[0m  [1m[32mINSERT INTO "couples" ("father", "mother", "breed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["father", "Henry"], ["mother", "Daisy"], ["breed", "Bichon Frise"], ["created_at", "2022-01-04 00:40:11.889513"], ["updated_at", "2022-01-04 00:40:11.889513"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCouple Create (0.1ms)[0m  [1m[32mINSERT INTO "couples" ("father", "mother", "breed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["father", "Zeus"], ["mother", "Samantha"], ["breed", "German Shepherd"], ["created_at", "2022-01-04 00:40:11.891117"], ["updated_at", "2022-01-04 00:40:11.891117"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.3ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Max"], ["breed", "Golden Retriever"], ["price", 1167], ["sex", "male"], ["couple_id", 1], ["created_at", "2022-01-04 00:40:11.901126"], ["updated_at", "2022-01-04 00:40:11.901126"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.9ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Luna"], ["breed", "Golden Retriever"], ["price", 1192], ["sex", "female"], ["couple_id", 1], ["created_at", "2022-01-04 00:40:11.903035"], ["updated_at", "2022-01-04 00:40:11.903035"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.1ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cooper"], ["breed", "Golden Retriever"], ["price", 1451], ["sex", "male"], ["couple_id", 1], ["created_at", "2022-01-04 00:40:11.905667"], ["updated_at", "2022-01-04 00:40:11.905667"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.1ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Maggie"], ["breed", "Bichon Frise"], ["price", 1118], ["sex", "female"], ["couple_id", 2], ["created_at", "2022-01-04 00:40:11.907246"], ["updated_at", "2022-01-04 00:40:11.907246"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.1ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jackson"], ["breed", "Bichon Frise"], ["price", 1260], ["sex", "male"], ["couple_id", 2], ["created_at", "2022-01-04 00:40:11.908821"], ["updated_at", "2022-01-04 00:40:11.908821"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.1ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Zoe"], ["breed", "Bichon Frise"], ["price", 940], ["sex", "female"], ["couple_id", 2], ["created_at", "2022-01-04 00:40:11.910376"], ["updated_at", "2022-01-04 00:40:11.910376"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.2ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Clifford"], ["breed", "German Shepherd"], ["price", 1182], ["sex", "male"], ["couple_id", 3], ["created_at", "2022-01-04 00:40:11.912048"], ["updated_at", "2022-01-04 00:40:11.912048"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.1ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dolly"], ["breed", "German Shepherd"], ["price", 965], ["sex", "female"], ["couple_id", 3], ["created_at", "2022-01-04 00:40:11.913725"], ["updated_at", "2022-01-04 00:40:11.913725"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPuppy Create (0.2ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lucky"], ["breed", "German Shepherd"], ["price", 1091], ["sex", "male"], ["couple_id", 3], ["created_at", "2022-01-04 00:40:11.915362"], ["updated_at", "2022-01-04 00:40:11.915362"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2022-01-03 19:40:47 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/andreweames/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/andreweames/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.0ms | Allocations: 480)
+Completed 200 OK in 15ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 4151)
+
+
+Started GET "/mini-profiler-resources/includes.css?v=35a79b300ab5afa978cb59af0b05e059" for 127.0.0.1 at 2022-01-03 19:40:47 -0500
+Started GET "/mini-profiler-resources/includes.js?v=35a79b300ab5afa978cb59af0b05e059" for 127.0.0.1 at 2022-01-03 19:40:47 -0500
+Started GET "/packs/js/application-e421b4aa3f716bebdab1.js" for 127.0.0.1 at 2022-01-03 19:40:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/mini-profiler-resources/includes.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-e421b4aa3f716bebdab1.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/mini-profiler-resources/includes.js"):
+  
+Started GET "/apple-touch-icon-precomposed.png" for 127.0.0.1 at 2022-01-03 19:40:47 -0500
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-01-03 19:40:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-01-03 19:40:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-01-03 19:40:58 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/andreweames/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/andreweames/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.7ms | Allocations: 191)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 752)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-03 19:40:59 -0500
+Processing by CouplesController#index as HTML
+  [1m[36mCouple Load (0.5ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 0.8ms | Allocations: 6104)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-03 19:42:11 -0500
+Processing by CouplesController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[36mCouple Load (0.9ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.4ms | Allocations: 6402)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Jack":String):
+  
+app/controllers/couples_controller.rb:4:in `index'
+Started GET "/couples" for 127.0.0.1 at 2022-01-03 19:42:26 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CouplesController#index as HTML
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms | Allocations: 8914)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Jack":String):
+  
+app/controllers/couples_controller.rb:4:in `index'
+Started GET "/couples" for 127.0.0.1 at 2022-01-03 19:45:38 -0500
+Processing by CouplesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[36mCouple Load (0.3ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.9ms | Allocations: 5907)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-03 19:47:59 -0500
+  
+SyntaxError (/Users/andreweames/Flatiron/code/dog-breeder-js-api/backend/app/controllers/couples_controller.rb:8: syntax error, unexpected end-of-input):
+  
+app/controllers/couples_controller.rb:8: syntax error, unexpected end-of-input
+app/controllers/couples_controller.rb:8: syntax error, unexpected end-of-input
+Started GET "/couples" for 127.0.0.1 at 2022-01-03 19:48:10 -0500
+Processing by CouplesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[36mCouple Load (0.4ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 5497)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-03 20:08:35 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CouplesController#index as HTML
+  [1m[36mCouple Load (0.2ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 0.4ms | Allocations: 8370)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-03 20:11:04 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CouplesController#index as HTML
+  [1m[36mCouple Load (0.2ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 8325)
+
+
+Started GET "/couples/1" for 127.0.0.1 at 2022-01-03 20:11:07 -0500
+Processing by CouplesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCouple Load (0.3ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/couples_controller.rb:8:in `show'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 1069)
+
+
+Started GET "/couples/1" for 127.0.0.1 at 2022-01-03 20:13:18 -0500
+Processing by CouplesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/couples_controller.rb:8:in `show'
+  [1m[36mCouple Load (0.3ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/couples_controller.rb:8:in `show'
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:9:in `show'
+Completed 200 OK in 26ms (Views: 14.1ms | ActiveRecord: 4.0ms | Allocations: 11314)
+
+
+Started GET "/couples/1" for 127.0.0.1 at 2022-01-03 20:14:42 -0500
+Processing by CouplesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/couples_controller.rb:8:in `show'
+  [1m[36mCouple Load (0.3ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/couples_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms | Allocations: 5496)
+
+
+  
+ArgumentError (puppy is not specified as a relationship on CoupleSerializer):
+  
+app/controllers/couples_controller.rb:12:in `new'
+app/controllers/couples_controller.rb:12:in `show'
+Started GET "/couples/1" for 127.0.0.1 at 2022-01-03 20:15:03 -0500
+Processing by CouplesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/couples_controller.rb:8:in `show'
+  [1m[36mCouple Load (0.2ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/couples_controller.rb:8:in `show'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:12:in `show'
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:12:in `show'
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 1.2ms | Allocations: 13244)
+
+
+Started GET "/couples/1" for 127.0.0.1 at 2022-01-03 20:15:25 -0500
+Processing by CouplesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCouple Load (0.6ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/couples_controller.rb:8:in `show'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:12:in `show'
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:12:in `show'
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 0.7ms | Allocations: 2537)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-01-03 20:15:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/couples/1" for 127.0.0.1 at 2022-01-03 20:17:53 -0500
+Processing by CouplesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCouple Load (10.5ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/couples_controller.rb:8:in `show'
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:12:in `show'
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:12:in `show'
+Completed 200 OK in 21ms (Views: 4.9ms | ActiveRecord: 12.4ms | Allocations: 2535)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-01-03 20:17:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/puppies" for 127.0.0.1 at 2022-01-03 20:20:57 -0500
+Processing by PuppiesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 10.7ms | Allocations: 7734)
+
+
+Started GET "/puppies/1" for 127.0.0.1 at 2022-01-03 20:23:17 -0500
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/puppies_controller.rb:8:in `show'
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:8:in `show'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 6223)
+
+
+Started GET "/puppies/1" for 127.0.0.1 at 2022-01-03 20:24:02 -0500
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/puppies_controller.rb:8:in `show'
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:8:in `show'
+Completed 200 OK in 21ms (Views: 0.5ms | ActiveRecord: 1.0ms | Allocations: 6220)
+
+
+Started GET "/puppies/1" for 127.0.0.1 at 2022-01-03 20:24:04 -0500
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 656)
+
+
+Started GET "/puppies/1" for 127.0.0.1 at 2022-01-03 20:24:16 -0500
+Processing by PuppiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/puppies_controller.rb:8:in `show'
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:8:in `show'
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:12:in `show'
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/puppies_controller.rb:12:in `show'
+Completed 200 OK in 16ms (Views: 4.7ms | ActiveRecord: 4.2ms | Allocations: 12159)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-03 20:31:02 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/andreweames/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/andreweames/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.6ms | Allocations: 315)
+Completed 200 OK in 28ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 2544)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-03 20:40:28 -0500
+Processing by CouplesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[36mCouple Load (0.2ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 37ms (Views: 33.1ms | ActiveRecord: 9.4ms | Allocations: 12480)
+
+
+Started GET "/" for ::1 at 2022-01-03 21:40:04 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/andreweames/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/andreweames/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.8ms | Allocations: 315)
+Completed 200 OK in 20ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 2553)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-01-03 21:40:04 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/couples" for 127.0.0.1 at 2022-01-04 17:54:33 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.3ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 25.3ms | ActiveRecord: 2.8ms | Allocations: 14026)
+
+
