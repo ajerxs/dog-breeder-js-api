@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
 function fetchTest() {
     fetch('http://127.0.0.1:3000/couples')
     .then(resp => resp.json())
-    .then(json => test.innerText = json["data"][0]["attributes"]["father"]);
+    .then(json => makeDiv(json));
 };
 
-function makeDiv(stuff) {
+function makeDiv(json) {
     let test = document.getElementById("test");
-    test.innerText = "Word.";
+    test.innerText = json["data"][0]["attributes"]["father"];
 };
