@@ -1,9 +1,18 @@
 body {
     margin: 0;
+    background-color: aliceblue;
 }
 
 #heading {
     background-color: aqua;
     text-align: center;
     padding: 20px;
+}
+
+#title {
+    font-family: "Copperplate", fantasy;
+}
+
+a + a {
+    margin-left: 20px;
 }
