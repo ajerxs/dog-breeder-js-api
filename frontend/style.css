@@ -16,3 +16,7 @@ body {
 a + a {
     margin-left: 20px;
 }
+
+#container {
+    margin: 5%;
+}
