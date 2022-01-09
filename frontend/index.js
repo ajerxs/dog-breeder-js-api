@@ -1,7 +1,7 @@
 const test  = document.getElementById("test");
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetchTest();
+    // fetchTest();
 });
 
 // function fetchTest() {
@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById('about').addEventListener('click', function() {
     let container = document.getElementById('container');
+    container.innerHTML = "";
     let p = document.createElement("p");
     p.innerHTML = 'If you can see this, that means the "About" link is working!'
     container.appendChild(p);
