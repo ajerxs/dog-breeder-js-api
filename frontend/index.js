@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById('about').addEventListener('click', function() {
     clearPage();
-    container.innerHTML = "";
     let p = document.createElement("p");
     p.innerHTML = 'If you can see this, that means the "About" link is working!'
     container.appendChild(p);
@@ -29,4 +28,5 @@ document.getElementById('about').addEventListener('click', function() {
 
 function clearPage() {
     let container = document.getElementById('container');
+    container.innerHTML = "";
 };
