@@ -22,7 +22,11 @@ a + a {
 }
 
 .couple {
-    border: 5px solid black;
+    border: 3px solid black;
     margin-bottom: 10px;
     background-color: cornsilk;
+}
+
+.couple-contents {
+    margin-left: 10px;
 }
