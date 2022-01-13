@@ -20,3 +20,9 @@ a + a {
 #container {
     margin: 5%;
 }
+
+.couple {
+    border: 5px solid black;
+    margin-bottom: 10px;
+    background-color: cornsilk;
+}

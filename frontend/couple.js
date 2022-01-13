@@ -1,8 +1,5 @@
 document.getElementById('couples').addEventListener('click', function() {
     clearPage();
-    let p = document.createElement("p");
-    p.innerHTML = 'If you can see this, that means the "Couples" link is working!'
-    container.appendChild(p);
     testFetch();
 });
 
@@ -14,20 +11,19 @@ function testFetch() {
 
 function fetchFathers(json) {
     for (let i = 0; i < json["data"].length; i++) {
-        // fathers.push(json["data"][i]["attributes"]["father"]);
         let container = document.getElementById('container');
 
         let couple = document.createElement("div");
         couple.classList.add("couple");
 
         let father = document.createElement("p");
-        father.innerHTML = "Father: " + json["data"][i]["attributes"]["father"];
+        father.innerHTML = "<strong>Father: </strong>" + json["data"][i]["attributes"]["father"];
 
         let mother = document.createElement("p");
-        mother.innerHTML = "Mother: " + json["data"][i]["attributes"]["mother"];
+        mother.innerHTML = "<strong>Mother: </strong>" + json["data"][i]["attributes"]["mother"];
 
         let breed = document.createElement("p");
-        breed.innerHTML = "Breed: " + json["data"][i]["attributes"]["breed"];
+        breed.innerHTML = "<strong>Breed: </strong>" + json["data"][i]["attributes"]["breed"];
 
         couple.append(father, mother, breed);
 
