@@ -17,13 +17,12 @@ document.getElementById('couples').addEventListener('click', function() {
 
 function makeCouples(json) {
     let data = json["data"];
+    couples.length = 0;
     for (let i = 0; i < data.length; i++) {
-        if (!(couples.find(e => e.father === data[i]["attributes"]["father"]) === couples.find(e => e.mother === data[i]["attributes"]["mother"]) === couples.find(e => e.breed == data[i]["attributes"]["breed"]))) {
-            let obj = new Couple(data[i]["attributes"]["father"], data[i]["attributes"]["mother"], data[i]["attributes"]["breed"]);
-            couples.push(obj);
-        };
+        let obj = new Couple(data[i]["attributes"]["father"], data[i]["attributes"]["mother"], data[i]["attributes"]["breed"]);
+        couples.push(obj);
     };
-}
+};
 
 function fetchCouples() {
     fetch('http://127.0.0.1:3000/couples')
