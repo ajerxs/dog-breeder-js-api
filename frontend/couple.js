@@ -64,6 +64,34 @@ function couplesDivs(json) {
 function newCoupleButton() {
     document.getElementById('button').addEventListener('click', function() {
         clearPage();
-        container.innerHTML = "If you see this, the new couples button is working!"
+        makeCoupleForm();
     });
+};
+
+function makeCoupleForm() {
+    let form = document.createElement("form");
+    form.setAttribute("method", "post");
+    form.setAttribute("action", "http://127.0.0.1:3000/couples");
+
+    let father = document.createElement("input");
+    father.setAttribute("type", "text");
+    father.setAttribute("name", "father")
+    father.setAttribute("placeholder", "Father");
+
+    let mother = document.createElement("input");
+    mother.setAttribute("type", "text");
+    mother.setAttribute("name", "mother");
+    mother.setAttribute("placeholder", "Mother")
+
+    let breed = document.createElement("input");
+    breed.setAttribute("type", "text");
+    breed.setAttribute("name", "breed");
+    breed.setAttribute("placeholder", "Breed");
+
+    let submit = document.createElement("input");
+    submit.setAttribute("type", "submit");
+    submit.setAttribute("value", "Submit");
+
+    form.append(father, mother, breed, submit);
+    container.appendChild(form);
 };
