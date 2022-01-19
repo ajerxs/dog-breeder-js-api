@@ -1,4 +1,5 @@
 let couples = []
+let container = document.getElementById('container');
 
 class Couple {
     constructor(father, mother, breed) {
@@ -13,6 +14,7 @@ document.getElementById('couples').addEventListener('click', function() {
     clearPage();
     fetchCouples();
     couplesDivs();
+    newCoupleButton();
 });
 
 function makeCouples(json) {
@@ -32,8 +34,6 @@ function fetchCouples() {
 
 function couplesDivs(json) {
     for (let i = 0; i < couples.length; i++) {
-        let container = document.getElementById('container');
-
         let couple = document.createElement("div");
         couple.classList.add("couple");
 
@@ -50,7 +50,20 @@ function couplesDivs(json) {
         breed.innerHTML = "<strong>Breed: </strong>" + couples[i].breed;
 
         couple.append(father, mother, breed);
-
-        container.appendChild(couple)
+        container.appendChild(couple);
     };
+    let button = document.createElement("button");
+    button.setAttribute('id', 'button');
+    button.innerHTML = "Create New!";
+
+    container.appendChild(button);
+};
+
+// NEW COUPLE FORM
+
+function newCoupleButton() {
+    document.getElementById('button').addEventListener('click', function() {
+        clearPage();
+        container.innerHTML = "If you see this, the new couples button is working!"
+    });
 };
