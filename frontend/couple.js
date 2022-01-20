@@ -73,25 +73,31 @@ function makeCoupleForm() {
     form.setAttribute("method", "post");
     form.setAttribute("action", "http://127.0.0.1:3000/couples");
 
+    let br = document.createElement("br");
+
     let father = document.createElement("input");
+    father.classList.add("couple-form");
     father.setAttribute("type", "text");
     father.setAttribute("name", "father")
     father.setAttribute("placeholder", "Father");
 
     let mother = document.createElement("input");
+    mother.classList.add("couple-form");
     mother.setAttribute("type", "text");
     mother.setAttribute("name", "mother");
     mother.setAttribute("placeholder", "Mother")
 
     let breed = document.createElement("input");
+    breed.classList.add("couple-form");
     breed.setAttribute("type", "text");
     breed.setAttribute("name", "breed");
     breed.setAttribute("placeholder", "Breed");
 
     let submit = document.createElement("input");
+    submit.classList.add("couple-form");
     submit.setAttribute("type", "submit");
     submit.setAttribute("value", "Submit");
 
-    form.append(father, mother, breed, submit);
+    form.append(father, br.cloneNode(), mother, br.cloneNode(), breed, br.cloneNode(), submit);
     container.appendChild(form);
 };
