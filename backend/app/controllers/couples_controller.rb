@@ -11,4 +11,18 @@ class CouplesController < ApplicationController
         }
         render json: CoupleSerializer.new(couple, options)
     end
+
+    def create
+        couple = Couple.create(couple_params)
+        render json: CoupleSerializer.new(couple)
+    end
+
+private
+
+    def couple_params
+        params.require(:couple).permit(
+            :father, :mother, :breed
+        )
+    end
+
 end

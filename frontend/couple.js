@@ -101,3 +101,4 @@ function makeCoupleForm() {
     form.append(father, br.cloneNode(), mother, br.cloneNode(), breed, br.cloneNode(), submit);
     container.appendChild(form);
 };
+
