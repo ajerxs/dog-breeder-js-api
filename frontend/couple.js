@@ -9,6 +9,7 @@ class Couple {
     }
 }
 
+// DISPLAY COUPLES
 
 document.getElementById('couples').addEventListener('click', function() {
     clearPage();
@@ -95,10 +96,28 @@ function makeCoupleForm() {
 
     let submit = document.createElement("input");
     submit.classList.add("couple-form");
+    submit.setAttribute("id", "submit");
     submit.setAttribute("type", "submit");
     submit.setAttribute("value", "Submit");
 
     form.append(father, br.cloneNode(), mother, br.cloneNode(), breed, br.cloneNode(), submit);
     container.appendChild(form);
+
+// POST NEW COUPLE
+
+    document.getElementById('submit').addEventListener('click', function(event) {
+        event.preventDefault();
+        // clearPage();
+        postCouple();
+    })
 };
 
+function postCouple() {
+    let formData = {
+        father: document.querySelector('form').elements[0].value,
+        mother: document.querySelector('form').elements[1].value,
+        breed: document.querySelector('form').elements[2].value
+    };
+
+    
+};
