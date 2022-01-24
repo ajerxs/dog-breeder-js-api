@@ -109,7 +109,11 @@ function makeCoupleForm() {
         event.preventDefault();
         // clearPage();
         postCouple();
-    })
+        clearPage();
+        fetchCouples();
+        couplesDivs();
+        newCoupleButton();
+    });
 };
 
 function postCouple() {
@@ -119,5 +123,20 @@ function postCouple() {
         breed: document.querySelector('form').elements[2].value
     };
 
-    
+    let configObj = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
+    };
+
+    fetch("http://127.0.0.1:3000/couples", configObj)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(object) {
+            console.log(object);
+        })
 };
