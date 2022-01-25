@@ -20,7 +20,7 @@ document.getElementById('couples').addEventListener('click', function() {
 
 function makeCouples(json) {
     let data = json["data"];
-    couples.length = 0;
+    couples = [];
     for (let i = 0; i < data.length; i++) {
         let obj = new Couple(data[i]["attributes"]["father"], data[i]["attributes"]["mother"], data[i]["attributes"]["breed"]);
         couples.push(obj);
@@ -107,12 +107,12 @@ function makeCoupleForm() {
 
     document.getElementById('submit').addEventListener('click', function(event) {
         event.preventDefault();
-        // clearPage();
         postCouple();
         clearPage();
-        fetchCouples();
-        couplesDivs();
-        newCoupleButton();
+        couples = [];
+        // fetchCouples();
+        // couplesDivs();
+        // newCoupleButton();
     });
 };
 
@@ -136,7 +136,7 @@ function postCouple() {
         .then(function(response) {
             return response.json();
         })
-        .then(function(object) {
-            console.log(object);
+        .then(function() {
+            alert("You have successfully added a new couple! Congratulations on the new family!");
         })
 };
