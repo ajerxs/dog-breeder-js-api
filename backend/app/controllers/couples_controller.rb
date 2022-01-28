@@ -17,6 +17,11 @@ class CouplesController < ApplicationController
         render json: CoupleSerializer.new(couple)
     end
 
+    def destroy
+        couple = Couple.find_by(id: params[:id])
+        couple.destroy
+    end
+
 private
 
     def couple_params

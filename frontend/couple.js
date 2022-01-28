@@ -2,7 +2,8 @@ let couples = []
 let container = document.getElementById('container');
 
 class Couple {
-    constructor(father, mother, breed) {
+    constructor(id, father, mother, breed) {
+        this.id = id;
         this.father = father;
         this.mother = mother;
         this.breed = breed;
@@ -22,7 +23,7 @@ function makeCouples(json) {
     let data = json["data"];
     couples = [];
     for (let i = 0; i < data.length; i++) {
-        let obj = new Couple(data[i]["attributes"]["father"], data[i]["attributes"]["mother"], data[i]["attributes"]["breed"]);
+        let obj = new Couple(data[i]["id"], data[i]["attributes"]["father"], data[i]["attributes"]["mother"], data[i]["attributes"]["breed"]);
         couples.push(obj);
     };
 };
@@ -37,6 +38,7 @@ function couplesDivs(json) {
     for (let i = 0; i < couples.length; i++) {
         let couple = document.createElement("div");
         couple.classList.add("couple");
+        couple.setAttribute('id', `${couples[i].id}`)
 
         let father = document.createElement("p");
         father.classList.add("couple-contents");
@@ -50,7 +52,16 @@ function couplesDivs(json) {
         breed.classList.add("couple-contents");
         breed.innerHTML = "<strong>Breed: </strong>" + couples[i].breed;
 
-        couple.append(father, mother, breed);
+        let delButton = document.createElement("button");
+        delButton.classList.add("couple-contents");
+        delButton.classList.add("delete");
+        delButton.innerHTML = "Delete";
+        delButton.onclick = function() {
+            deleteCouple(couples[i]);
+            clearPage();
+        }
+
+        couple.append(father, mother, breed, delButton);
         container.appendChild(couple);
     };
     let button = document.createElement("button");
@@ -109,11 +120,9 @@ function makeCoupleForm() {
         event.preventDefault();
         postCouple();
         clearPage();
-        couples = [];
-        // fetchCouples();
-        // couplesDivs();
-        // newCoupleButton();
     });
+
+
 };
 
 function postCouple() {
@@ -139,4 +148,23 @@ function postCouple() {
         .then(function() {
             alert("You have successfully added a new couple! Congratulations on the new family!");
         })
+};
+
+// DELETE
+
+function deleteCouple(couple) {
+    let configObj = {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            id: couple.id
+        })
+    };
+
+    fetch(`http://127.0.0.1:3000/couples/${couple.id}`, configObj)
+    .then(resp => resp.text())
+    .then(resp => alert("You have successfull deleted this couple."));
 };
