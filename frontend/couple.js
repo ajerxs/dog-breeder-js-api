@@ -1,5 +1,4 @@
 let couples = []
-let container = document.getElementById('container');
 
 class Couple {
     constructor(id, father, mother, breed) {

@@ -1,23 +1,9 @@
-const test  = document.getElementById("test");
+let container = document.getElementById('container');
 
-document.addEventListener("DOMContentLoaded", () => {
-    // fetchTest();
-});
-
-// function fetchTest() {
-//     fetch('http://127.0.0.1:3000/couples')
-//     .then(resp => resp.json())
-//     .then(json => makeDiv(json));
-// };
-
-// function makeDiv(json) {
-//     let test = document.getElementById("test");
-//     test.innerText = json["data"][0]["attributes"]["father"];
-// };
-
-// ('about').observe('click', function(event) {
-//     Event.stop(event)
-// })
+function clearPage() {
+    let container = document.getElementById('container');
+    container.innerHTML = "";
+};
 
 document.getElementById('about').addEventListener('click', function() {
     clearPage();
@@ -25,8 +11,3 @@ document.getElementById('about').addEventListener('click', function() {
     p.innerHTML = 'If you can see this, that means the "About" link is working!'
     container.appendChild(p);
 });
-
-function clearPage() {
-    let container = document.getElementById('container');
-    container.innerHTML = "";
-};
