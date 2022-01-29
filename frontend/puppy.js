@@ -96,9 +96,9 @@ function makePuppyForm() {
 
     let price = document.createElement("input");
     price.classList.add("puppy-form");
-    price.setAttribute("type", "text");
+    price.setAttribute("type", "number");
     price.setAttribute("name", "breed");
-    price.setAttribute("placeholder", "Breed");
+    price.setAttribute("placeholder", "Price");
 
     let sex = document.createElement("input");
     sex.classList.add("puppy-form");
