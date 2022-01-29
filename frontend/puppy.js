@@ -31,13 +31,14 @@ document.getElementById('puppies').addEventListener('click', function() {
     clearPage();
     fetchPuppies();
     puppiesDivs();
+    newPuppyButton();
 });
 
 function puppiesDivs() {
     for (let i = 0; i < puppies.length; i++) {
         let puppy = document.createElement("div");
         puppy.classList.add("puppy");
-        puppy.setAttribute('id', `${puppies[i]}.id`);
+        puppy.setAttribute('id', `${puppies[i].id}`);
 
         let name = document.createElement("p");
         name.classList.add("puppy-contents");
@@ -67,10 +68,58 @@ function puppiesDivs() {
 
 // NEW PUPPY FORM 
 
-function newCoupleButton() {
+function newPuppyButton() {
     document.getElementById('button').addEventListener('click', function() {
         clearPage();
-        // makePuppyForm();
+        makePuppyForm();
     });
 };
 
+function makePuppyForm() {
+    let form = document.createElement("form");
+    form.setAttribute("method", "post");
+    form.setAttribute("action", "http://127.0.0.1:3000/puppies");
+
+    let br = document.createElement("br");
+
+    let name = document.createElement("input");
+    name.classList.add("puppy-form");
+    name.setAttribute("type", "text");
+    name.setAttribute("name", "name")
+    name.setAttribute("placeholder", "Name");
+
+    let breed = document.createElement("input");
+    breed.classList.add("puppy-form");
+    breed.setAttribute("type", "text");
+    breed.setAttribute("name", "breed");
+    breed.setAttribute("placeholder", "Breed")
+
+    let price = document.createElement("input");
+    price.classList.add("puppy-form");
+    price.setAttribute("type", "text");
+    price.setAttribute("name", "breed");
+    price.setAttribute("placeholder", "Breed");
+
+    let sex = document.createElement("input");
+    sex.classList.add("puppy-form");
+    sex.setAttribute("type", "text");
+    sex.setAttribute("name", "sex");
+    sex.setAttribute("placeholder", "Sex");
+
+    let submit = document.createElement("input");
+    submit.classList.add("puppy-form");
+    submit.setAttribute("id", "submit");
+    submit.setAttribute("type", "submit");
+    submit.setAttribute("value", "Submit");
+
+    form.append(name, br.cloneNode(), breed, br.cloneNode(), price, br.cloneNode(), sex, br.cloneNode(), submit);
+    container.appendChild(form);
+
+// POST NEW COUPLE
+
+    // document.getElementById('submit').addEventListener('click', function(event) {
+    //     event.preventDefault();
+    //     postCouple();
+    //     clearPage();
+    // });
+};

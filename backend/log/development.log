@@ -9005,3 +9005,363 @@ Processing by PuppiesController#index as */*
 Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 2123)
 
 
+Started GET "/couples" for 127.0.0.1 at 2022-01-29 15:06:56 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.4ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 18.5ms | ActiveRecord: 2.4ms | Allocations: 13964)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-29 15:06:57 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 1.2ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-29 15:07:25 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.7ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.9ms | Allocations: 3379)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-29 15:07:25 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 3379)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:18:38 -0500
+Processing by PuppiesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.8ms | Allocations: 6555)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:18:40 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 2141)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:18:40 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 2123)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:20:49 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.8ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.8ms | Allocations: 2123)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:20:50 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 2123)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-29 15:22:03 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (1.0ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 1.6ms | Allocations: 3384)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-29 15:22:09 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 3361)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:22:16 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 2123)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-29 15:23:14 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.4ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 8.5ms | ActiveRecord: 0.7ms | Allocations: 3359)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:23:19 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.2ms | Allocations: 2124)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-29 15:23:31 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.2ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:23:42 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.5ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.5ms | Allocations: 2123)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:24:34 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 2123)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:24:35 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 2123)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:25:03 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.5ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.5ms | Allocations: 2123)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:25:04 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 2123)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:25:07 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 2123)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:25:07 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 2123)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-29 15:25:12 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:27:09 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 2123)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:27:10 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 2123)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:27:18 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 2123)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:28:49 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 2123)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:28:49 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 2123)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-29 15:28:54 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.2ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-29 15:28:54 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 3359)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:28:55 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 2123)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-29 15:28:58 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.5ms | Allocations: 3359)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:29:24 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 2123)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-29 15:29:26 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-29 15:29:28 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-29 15:29:28 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.2ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 3359)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:29:29 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 2123)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-29 15:31:36 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 2123)
+
+

@@ -120,8 +120,6 @@ function makeCoupleForm() {
         postCouple();
         clearPage();
     });
-
-
 };
 
 function postCouple() {
