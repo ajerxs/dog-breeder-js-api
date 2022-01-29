@@ -29,44 +29,48 @@ function fetchPuppies() {
 
 document.getElementById('puppies').addEventListener('click', function() {
     clearPage();
-    let p = document.createElement("p");
-    p.innerHTML = 'If you can see this, that means the "Puppies" link is working!'
-    container.appendChild(p);
+    fetchPuppies();
+    puppiesDivs();
 });
 
-// function couplesDivs(json) {
-//     for (let i = 0; i < couples.length; i++) {
-//         let couple = document.createElement("div");
-//         couple.classList.add("couple");
-//         couple.setAttribute('id', `${couples[i].id}`)
+function puppiesDivs() {
+    for (let i = 0; i < puppies.length; i++) {
+        let puppy = document.createElement("div");
+        puppy.classList.add("puppy");
+        puppy.setAttribute('id', `${puppies[i]}.id`);
 
-//         let father = document.createElement("p");
-//         father.classList.add("couple-contents");
-//         father.innerHTML = "<strong>Father: </strong>" + couples[i].father;
+        let name = document.createElement("p");
+        name.classList.add("puppy-contents");
+        name.innerHTML = "<strong>Name: </strong>" + puppies[i].name;
 
-//         let mother = document.createElement("p");
-//         mother.classList.add("couple-contents");
-//         mother.innerHTML = "<strong>Mother: </strong>" + couples[i].mother;
+        let breed = document.createElement("p");
+        breed.classList.add("puppy-contents");
+        breed.innerHTML = "<strong>Name: </strong>" + puppies[i].breed;
 
-//         let breed = document.createElement("p");
-//         breed.classList.add("couple-contents");
-//         breed.innerHTML = "<strong>Breed: </strong>" + couples[i].breed;
+        let price = document.createElement("p");
+        price.classList.add("puppy-contents"); 
+        price.innerHTML = "<strong>Price: </strong>$" + puppies[i].price;
 
-//         let delButton = document.createElement("button");
-//         delButton.classList.add("couple-contents");
-//         delButton.classList.add("delete");
-//         delButton.innerHTML = "Delete";
-//         delButton.onclick = function() {
-//             deleteCouple(couples[i]);
-//             clearPage();
-//         }
+        let sex = document.createElement("p");
+        sex.classList.add("puppy-contents");
+        sex.innerHTML = "<strong>Sex: </strong>" + puppies[i].sex;
 
-//         couple.append(father, mother, breed, delButton);
-//         container.appendChild(couple);
-//     };
-//     let button = document.createElement("button");
-//     button.setAttribute('id', 'button');
-//     button.innerHTML = "Create New!";
+        puppy.append(name, breed, price, sex);
+        container.appendChild(puppy);
+    };
+    let button = document.createElement("button");
+    button.setAttribute('id', 'button');
+    button.innerHTML = "Create New!";
 
-//     container.appendChild(button);
-// };
+    container.appendChild(button);
+};
+
+// NEW PUPPY FORM 
+
+function newCoupleButton() {
+    document.getElementById('button').addEventListener('click', function() {
+        clearPage();
+        // makePuppyForm();
+    });
+};
+

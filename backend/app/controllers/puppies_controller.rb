@@ -11,4 +11,23 @@ class PuppiesController < ApplicationController
         }
         render json: PuppySerializer.new(puppy, options)
     end
+
+    def create
+        puppy = Puppy.create(puppy_params)
+        render json: PuppySerializer.new(puppy)
+    end
+
+    def destroy
+        puppy = Puppy.find_by(id: params[:id])
+        puppy.destroy
+    end
+
+private
+
+    def puppy_params
+        params.require(:puppy).permit(
+            :name, :breed, :price, :sex, :couple
+        )
+    end
+
 end

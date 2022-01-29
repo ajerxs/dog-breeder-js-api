@@ -21,13 +21,13 @@ a + a {
     margin: 5%;
 }
 
-.couple {
+.couple, .puppy {
     border: 3px solid black;
     margin-bottom: 10px;
     background-color: cornsilk;
 }
 
-.couple-contents {
+.couple-contents, .puppy-contents {
     margin-left: 10px;
     margin-bottom: 10px;
 }

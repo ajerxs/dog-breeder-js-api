@@ -33,7 +33,7 @@ function fetchCouples() {
     .then(json => makeCouples(json))
 };
 
-function couplesDivs(json) {
+function couplesDivs() {
     for (let i = 0; i < couples.length; i++) {
         let couple = document.createElement("div");
         couple.classList.add("couple");
