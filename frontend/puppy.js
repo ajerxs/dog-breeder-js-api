@@ -16,7 +16,7 @@ function makePuppies(json) {
     let data = json["data"];
     puppies = [];
     for (let i = 0; i < data.length; i++) {
-        let obj = new Puppy(data[i]["id"], data[i]["attributes"]["name"], data[i]["attributes"]["breed"], data[i]["attributes"]["price"], data[i]["attributes"]["sex"]);
+        let obj = new Puppy(data[i]["id"], data[i]["attributes"]["name"], data[i]["attributes"]["breed"], data[i]["attributes"]["price"], data[i]["attributes"]["sex"], );
         puppies.push(obj);
     };
 };
@@ -30,6 +30,7 @@ function fetchPuppies() {
 document.getElementById('puppies').addEventListener('click', function() {
     clearPage();
     fetchPuppies();
+    fetchCouples();
     puppiesDivs();
     newPuppyButton();
 });
@@ -106,13 +107,23 @@ function makePuppyForm() {
     sex.setAttribute("name", "sex");
     sex.setAttribute("placeholder", "Sex");
 
+    let couple = document.createElement("select");
+    couple.classList.add("puppy-form");
+    couple.setAttribute("name", "couple");
+    for (let i = 0; i < couples.length; i++) {
+        let opt = document.createElement("option");
+        opt.value = couples[i].id;
+        opt.text = `Father: ${couples[i].father}, Mother: ${couples[i].mother}`;
+        couple.add(opt); 
+    };
+
     let submit = document.createElement("input");
     submit.classList.add("puppy-form");
     submit.setAttribute("id", "submit");
     submit.setAttribute("type", "submit");
     submit.setAttribute("value", "Submit");
 
-    form.append(name, br.cloneNode(), breed, br.cloneNode(), price, br.cloneNode(), sex, br.cloneNode(), submit);
+    form.append(name, br.cloneNode(), breed, br.cloneNode(), price, br.cloneNode(), sex, br.cloneNode(), couple, br.cloneNode(), submit);
     container.appendChild(form);
 
 // POST NEW COUPLE
