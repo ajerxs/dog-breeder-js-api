@@ -143,7 +143,7 @@ function postCouple() {
             return response.json();
         })
         .then(function() {
-            alert("You have successfully added a new couple! Congratulations on the new family!");
+            alert("You have successfully added a new and loving couple!");
         })
 };
 

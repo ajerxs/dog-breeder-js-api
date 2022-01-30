@@ -57,7 +57,16 @@ function puppiesDivs() {
         sex.classList.add("puppy-contents");
         sex.innerHTML = "<strong>Sex: </strong>" + puppies[i].sex;
 
-        puppy.append(name, breed, price, sex);
+        let delButton = document.createElement("button");
+        delButton.classList.add("puppy-contents");
+        delButton.classList.add("delete");
+        delButton.innerHTML = "Delete";
+        delButton.onclick = function() {
+            deletePuppy(puppies[i]);
+            clearPage();
+        }
+
+        puppy.append(name, breed, price, sex, delButton);
         container.appendChild(puppy);
     };
     let button = document.createElement("button");
@@ -135,31 +144,6 @@ function makePuppyForm() {
     });
 };
 
-// function postCouple() {
-//     let formData = {
-//         father: document.querySelector('form').elements[0].value,
-//         mother: document.querySelector('form').elements[1].value,
-//         breed: document.querySelector('form').elements[2].value
-//     };
-
-//     let configObj = {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//           "Accept": "application/json"
-//         },
-//         body: JSON.stringify(formData)
-//     };
-
-//     fetch("http://127.0.0.1:3000/couples", configObj)
-//         .then(function(response) {
-//             return response.json();
-//         })
-//         .then(function() {
-//             alert("You have successfully added a new couple! Congratulations on the new family!");
-//         })
-// };
-
 function postPuppy() {
     let formData = {
         name: document.querySelector('form').elements[0].value,
@@ -185,4 +169,21 @@ function postPuppy() {
         .then(function() {
             alert("You have successfully added a new puppy! Congratulations on the new family!");
         })
+};
+
+function deletePuppy(puppy) {
+    let configObj = {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            id: puppy.id
+        })
+    };
+
+    fetch(`http://127.0.0.1:3000/puppies/${puppy.id}`, configObj)
+    .then(resp => resp.text())
+    .then(resp => alert("You have successfull deleted this puppy."));
 };
