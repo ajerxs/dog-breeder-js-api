@@ -25,11 +25,9 @@ ActiveRecord::Schema.define(version: 2022_01_04_001758) do
     t.string "breed"
     t.integer "price"
     t.string "sex"
-    t.integer "couple_id", null: false
+    t.integer "couple_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["couple_id"], name: "index_puppies_on_couple_id"
   end
 
-  add_foreign_key "puppies", "couples"
 end

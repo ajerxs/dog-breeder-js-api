@@ -5,7 +5,7 @@ class CreatePuppies < ActiveRecord::Migration[6.1]
       t.string :breed
       t.integer :price
       t.string :sex
-      t.references :couple, null: false, foreign_key: true
+      t.integer :couple_id
 
       t.timestamps
     end

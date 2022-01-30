@@ -26,7 +26,7 @@ private
 
     def puppy_params
         params.require(:puppy).permit(
-            :name, :breed, :price, :sex, :couple
+            :name, :breed, :price, :sex, :couple_id
         )
     end
 

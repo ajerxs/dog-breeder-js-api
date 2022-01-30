@@ -128,9 +128,61 @@ function makePuppyForm() {
 
 // POST NEW COUPLE
 
-    // document.getElementById('submit').addEventListener('click', function(event) {
-    //     event.preventDefault();
-    //     postCouple();
-    //     clearPage();
-    // });
+    document.getElementById('submit').addEventListener('click', function(event) {
+        event.preventDefault();
+        postPuppy();
+        clearPage();
+    });
+};
+
+// function postCouple() {
+//     let formData = {
+//         father: document.querySelector('form').elements[0].value,
+//         mother: document.querySelector('form').elements[1].value,
+//         breed: document.querySelector('form').elements[2].value
+//     };
+
+//     let configObj = {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//           "Accept": "application/json"
+//         },
+//         body: JSON.stringify(formData)
+//     };
+
+//     fetch("http://127.0.0.1:3000/couples", configObj)
+//         .then(function(response) {
+//             return response.json();
+//         })
+//         .then(function() {
+//             alert("You have successfully added a new couple! Congratulations on the new family!");
+//         })
+// };
+
+function postPuppy() {
+    let formData = {
+        name: document.querySelector('form').elements[0].value,
+        breed: document.querySelector('form').elements[1].value,
+        price: document.querySelector('form').elements[2].value,
+        sex: document.querySelector('form').elements[3].value,
+        couple_id: document.querySelector('form').elements[4].value
+    };
+
+    let configObj = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
+    };
+
+    fetch("http://127.0.0.1:3000/puppies", configObj)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function() {
+            alert("You have successfully added a new puppy! Congratulations on the new family!");
+        })
 };
