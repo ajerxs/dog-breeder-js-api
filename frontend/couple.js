@@ -80,6 +80,9 @@ function newCoupleButton() {
 };
 
 function makeCoupleForm() {
+    let h2 = document.createElement("h2");
+    h2.innerHTML = "New Couple Form:";
+
     let form = document.createElement("form");
     form.setAttribute("method", "post");
     form.setAttribute("action", "http://127.0.0.1:3000/couples");
@@ -111,7 +114,7 @@ function makeCoupleForm() {
     submit.setAttribute("value", "Submit");
 
     form.append(father, br.cloneNode(), mother, br.cloneNode(), breed, br.cloneNode(), submit);
-    container.appendChild(form);
+    container.append(h2, form);
 
 // POST NEW COUPLE
 

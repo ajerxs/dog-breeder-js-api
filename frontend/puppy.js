@@ -86,6 +86,9 @@ function newPuppyButton() {
 };
 
 function makePuppyForm() {
+    let h2 = document.createElement("h2");
+    h2.innerHTML = "New Puppy Form:"
+
     let form = document.createElement("form");
     form.setAttribute("method", "post");
     form.setAttribute("action", "http://127.0.0.1:3000/puppies");
@@ -133,7 +136,7 @@ function makePuppyForm() {
     submit.setAttribute("value", "Submit");
 
     form.append(name, br.cloneNode(), breed, br.cloneNode(), price, br.cloneNode(), sex, br.cloneNode(), couple, br.cloneNode(), submit);
-    container.appendChild(form);
+    container.append(h2, form);
 
 // POST NEW COUPLE
 
