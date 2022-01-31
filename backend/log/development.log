@@ -13201,3 +13201,1631 @@ Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.4ms | Allocations: 3359)
   [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
   [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:57:41 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20220104001655_create_couples.rb
+20220104001758_create_puppies.rb
+
+
+):
+  
+activerecord (6.1.4.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:57:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20220104001655_create_couples.rb
+20220104001758_create_puppies.rb
+
+
+):
+  
+activerecord (6.1.4.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:57:44 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20220104001655_create_couples.rb
+20220104001758_create_puppies.rb
+
+
+):
+  
+activerecord (6.1.4.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:57:45 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20220104001655_create_couples.rb
+20220104001758_create_puppies.rb
+
+
+):
+  
+activerecord (6.1.4.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:57:45 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20220104001655_create_couples.rb
+20220104001758_create_puppies.rb
+
+
+):
+  
+activerecord (6.1.4.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:57:45 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20220104001655_create_couples.rb
+20220104001758_create_puppies.rb
+
+
+):
+  
+activerecord (6.1.4.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 18:57:46 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:57:46 -0500
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20220104001655_create_couples.rb
+20220104001758_create_puppies.rb
+
+
+):
+  
+activerecord (6.1.4.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20220104001655_create_couples.rb
+20220104001758_create_puppies.rb
+
+
+):
+  
+activerecord (6.1.4.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 18:57:47 -0500
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:57:47 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20220104001655_create_couples.rb
+20220104001758_create_puppies.rb
+
+
+):
+  
+activerecord (6.1.4.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20220104001655_create_couples.rb
+20220104001758_create_puppies.rb
+
+
+):
+  
+activerecord (6.1.4.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 18:57:47 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20220104001655_create_couples.rb
+20220104001758_create_puppies.rb
+
+
+):
+  
+activerecord (6.1.4.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:57:47 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20220104001655_create_couples.rb
+20220104001758_create_puppies.rb
+
+
+):
+  
+activerecord (6.1.4.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:57:47 -0500
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 18:57:47 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20220104001655_create_couples.rb
+20220104001758_create_puppies.rb
+
+
+):
+  
+activerecord (6.1.4.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20220104001655_create_couples.rb
+20220104001758_create_puppies.rb
+
+
+):
+  
+activerecord (6.1.4.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCouples (20220104001655)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "couples" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "father" varchar, "mother" varchar, "breed" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220104001655"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePuppies (20220104001758)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "puppies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "breed" varchar, "price" integer, "sex" varchar, "couple_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220104001758"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-01-30 23:58:00.446879"], ["updated_at", "2022-01-30 23:58:00.446879"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCouple Create (0.9ms)[0m  [1m[32mINSERT INTO "couples" ("father", "mother", "breed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["father", "Jack"], ["mother", "Cleo"], ["breed", "Golden Retriever"], ["created_at", "2022-01-30 23:58:04.877487"], ["updated_at", "2022-01-30 23:58:04.877487"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCouple Create (0.1ms)[0m  [1m[32mINSERT INTO "couples" ("father", "mother", "breed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["father", "Henry"], ["mother", "Daisy"], ["breed", "Bichon Frise"], ["created_at", "2022-01-30 23:58:04.880640"], ["updated_at", "2022-01-30 23:58:04.880640"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCouple Create (0.1ms)[0m  [1m[32mINSERT INTO "couples" ("father", "mother", "breed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["father", "Zeus"], ["mother", "Samantha"], ["breed", "German Shepherd"], ["created_at", "2022-01-30 23:58:04.882228"], ["updated_at", "2022-01-30 23:58:04.882228"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPuppy Create (0.1ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Max"], ["breed", "Golden Retriever"], ["price", 1167], ["sex", "male"], ["couple_id", 1], ["created_at", "2022-01-30 23:58:04.891393"], ["updated_at", "2022-01-30 23:58:04.891393"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCouple Load (0.0ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPuppy Create (0.1ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Luna"], ["breed", "Golden Retriever"], ["price", 1192], ["sex", "female"], ["couple_id", 1], ["created_at", "2022-01-30 23:58:04.893733"], ["updated_at", "2022-01-30 23:58:04.893733"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCouple Load (0.0ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPuppy Create (0.1ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cooper"], ["breed", "Golden Retriever"], ["price", 1451], ["sex", "male"], ["couple_id", 1], ["created_at", "2022-01-30 23:58:04.895893"], ["updated_at", "2022-01-30 23:58:04.895893"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCouple Load (0.0ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPuppy Create (0.1ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Maggie"], ["breed", "Bichon Frise"], ["price", 1118], ["sex", "female"], ["couple_id", 2], ["created_at", "2022-01-30 23:58:04.898028"], ["updated_at", "2022-01-30 23:58:04.898028"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCouple Load (0.0ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPuppy Create (0.1ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jackson"], ["breed", "Bichon Frise"], ["price", 1260], ["sex", "male"], ["couple_id", 2], ["created_at", "2022-01-30 23:58:04.900159"], ["updated_at", "2022-01-30 23:58:04.900159"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCouple Load (0.0ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPuppy Create (0.3ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Zoe"], ["breed", "Bichon Frise"], ["price", 940], ["sex", "female"], ["couple_id", 2], ["created_at", "2022-01-30 23:58:04.908263"], ["updated_at", "2022-01-30 23:58:04.908263"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCouple Load (0.0ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPuppy Create (0.1ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Clifford"], ["breed", "German Shepherd"], ["price", 1182], ["sex", "male"], ["couple_id", 3], ["created_at", "2022-01-30 23:58:04.910870"], ["updated_at", "2022-01-30 23:58:04.910870"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCouple Load (0.0ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPuppy Create (0.1ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dolly"], ["breed", "German Shepherd"], ["price", 965], ["sex", "female"], ["couple_id", 3], ["created_at", "2022-01-30 23:58:04.913062"], ["updated_at", "2022-01-30 23:58:04.913062"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCouple Load (0.0ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPuppy Create (0.1ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lucky"], ["breed", "German Shepherd"], ["price", 1091], ["sex", "male"], ["couple_id", 3], ["created_at", "2022-01-30 23:58:04.915201"], ["updated_at", "2022-01-30 23:58:04.915201"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:58:13 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 37ms (Views: 30.0ms | ActiveRecord: 2.1ms | Allocations: 14046)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:58:13 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 3379)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 18:58:15 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 6017)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:58:15 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 3379)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:58:15 -0500
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 18:58:15 -0500
+Processing by PuppiesController#index as */*
+Processing by CouplesController#index as */*
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 2524)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[36mCouple Load (0.2ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.7ms | Allocations: 6357)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:58:21 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:58:21 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 3361)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:58:23 -0500
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 18:58:23 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 2123)
+
+
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 5747)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:58:30 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:58:32 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:59:05 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.3ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:59:06 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.3ms | Allocations: 3360)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 18:59:28 -0500
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:59:28 -0500
+Processing by PuppiesController#index as */*
+Processing by CouplesController#index as */*
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 2727)
+
+
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 5541)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 18:59:30 -0500
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 18:59:30 -0500
+Processing by CouplesController#index as */*
+Processing by PuppiesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 3504)
+
+
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.5ms | Allocations: 5747)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:00:39 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (8.7ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 7.4ms | ActiveRecord: 9.2ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:00:39 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:00:40 -0500
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:00:40 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Processing by CouplesController#index as */*
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 2305)
+
+
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.4ms | Allocations: 3582)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:00:43 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:00:43 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:00:59 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.5ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.7ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:00:59 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:01:01 -0500
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:01:01 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Processing by CouplesController#index as */*
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 2300)
+
+
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 3582)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:01:01 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:01:01 -0500
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 2314)
+
+
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 3359)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:01:31 -0500
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:01:31 -0500
+Processing by PuppiesController#index as */*
+Processing by CouplesController#index as */*
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 2710)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.4ms | Allocations: 5540)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:01:32 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (4.9ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 4.9ms | Allocations: 2268)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:01:32 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:01:33 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:01:48 -0500
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:01:48 -0500
+Processing by PuppiesController#index as */*
+Processing by CouplesController#index as */*
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 2703)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.3ms | Allocations: 5545)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:01:49 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 2172)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:01:49 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.8ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 1.0ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:01:50 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:02:01 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.3ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.6ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:02:01 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.2ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 3359)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:02:02 -0500
+Processing by PuppiesController#index as */*
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:02:02 -0500
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 2132)
+
+
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 3397)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:02:03 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.1ms | Allocations: 2123)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:02:03 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:03:59 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.6ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 34ms (Views: 18.6ms | ActiveRecord: 1.4ms | Allocations: 14071)
+
+
+Started POST "/couples" for 127.0.0.1 at 2022-01-30 19:04:05 -0500
+Processing by CouplesController#create as JSON
+  Parameters: {"father"=>"New Father", "mother"=>"New Mother", "breed"=>"New Breed", "couple"=>{"father"=>"New Father", "mother"=>"New Mother", "breed"=>"New Breed"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/couples_controller.rb:16:in `create'
+  [1m[36mCouple Create (1.3ms)[0m  [1m[32mINSERT INTO "couples" ("father", "mother", "breed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["father", "New Father"], ["mother", "New Mother"], ["breed", "New Breed"], ["created_at", "2022-01-31 00:04:05.680977"], ["updated_at", "2022-01-31 00:04:05.680977"]]
+  ↳ app/controllers/couples_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/couples_controller.rb:16:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 4]]
+  ↳ app/controllers/couples_controller.rb:17:in `create'
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 1.7ms | Allocations: 2846)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:04:07 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 4]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 4197)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:04:08 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 4]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 4197)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:04:10 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:04:10 -0500
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 6137)
+
+
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 4]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 4177)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:04:11 -0500
+Processing by PuppiesController#index as */*
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:04:11 -0500
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 2144)
+
+
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 4]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 4177)
+
+
+Started POST "/puppies" for 127.0.0.1 at 2022-01-30 19:04:25 -0500
+Processing by PuppiesController#create as JSON
+  Parameters: {"name"=>"New Pup", "breed"=>"Pup Breed", "price"=>"1000", "sex"=>"male", "couple_id"=>"4", "puppy"=>{"name"=>"New Pup", "breed"=>"Pup Breed", "price"=>"1000", "sex"=>"male", "couple_id"=>"4"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/puppies_controller.rb:16:in `create'
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:16:in `create'
+  [1m[36mPuppy Create (0.2ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "breed", "price", "sex", "couple_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "New Pup"], ["breed", "Pup Breed"], ["price", 1000], ["sex", "male"], ["couple_id", 4], ["created_at", "2022-01-31 00:04:25.444832"], ["updated_at", "2022-01-31 00:04:25.444832"]]
+  ↳ app/controllers/puppies_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/puppies_controller.rb:16:in `create'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 3340)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:04:27 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 2342)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:04:27 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.2ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 4]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 4209)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:04:30 -0500
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:04:30 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+Processing by PuppiesController#index as */*
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 4]]
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 4678)
+
+
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.3ms | Allocations: 7324)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:04:34 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 4]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 4209)
+
+
+Started DELETE "/couples/4" for 127.0.0.1 at 2022-01-30 19:04:36 -0500
+Processing by CouplesController#destroy as JSON
+  Parameters: {"id"=>"4", "couple"=>{"id"=>"4"}}
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples" WHERE "couples"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/couples_controller.rb:21:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/couples_controller.rb:22:in `destroy'
+  [1m[36mCouple Destroy (2.6ms)[0m  [1m[31mDELETE FROM "couples" WHERE "couples"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/couples_controller.rb:22:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/couples_controller.rb:22:in `destroy'
+Completed 204 No Content in 5ms (ActiveRecord: 3.1ms | Allocations: 1849)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:04:38 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:04:39 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.2ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 3359)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:04:40 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:04:40 -0500
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+Processing by PuppiesController#index as */*
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.4ms | Allocations: 4345)
+
+
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 4383)
+
+
+Started DELETE "/puppies/10" for 127.0.0.1 at 2022-01-30 19:04:43 -0500
+Processing by PuppiesController#destroy as JSON
+  Parameters: {"id"=>"10", "puppy"=>{"id"=>"10"}}
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/puppies_controller.rb:21:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/puppies_controller.rb:22:in `destroy'
+  [1m[36mPuppy Destroy (0.2ms)[0m  [1m[31mDELETE FROM "puppies" WHERE "puppies"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/puppies_controller.rb:22:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/puppies_controller.rb:22:in `destroy'
+Completed 204 No Content in 2ms (ActiveRecord: 0.6ms | Allocations: 1838)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:04:45 -0500
+Processing by PuppiesController#index as */*
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 2150)
+
+
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:04:45 -0500
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 3382)
+
+
+Started GET "/puppies" for 127.0.0.1 at 2022-01-30 19:04:52 -0500
+Started GET "/couples" for 127.0.0.1 at 2022-01-30 19:04:52 -0500
+Processing by PuppiesController#index as */*
+Processing by CouplesController#index as */*
+  [1m[36mCouple Load (0.1ms)[0m  [1m[34mSELECT "couples".* FROM "couples"[0m
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT "puppies".* FROM "puppies"[0m
+  ↳ app/controllers/puppies_controller.rb:4:in `index'
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 2706)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 1]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 2]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "puppies"."id" FROM "puppies" WHERE "puppies"."couple_id" = ?[0m  [["couple_id", 3]]
+  ↳ app/controllers/couples_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.5ms | Allocations: 5539)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
