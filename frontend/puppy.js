@@ -61,6 +61,8 @@ function puppiesDivs() {
         let delButton = document.createElement("button");
         delButton.classList.add("puppy-contents");
         delButton.classList.add("delete");
+        delButton.classList.add("btn")
+        delButton.classList.add("btn-secondary")
         delButton.innerHTML = "Delete";
         delButton.onclick = function() {
             deletePuppy(puppies[i]);

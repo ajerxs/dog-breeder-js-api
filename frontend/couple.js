@@ -55,6 +55,8 @@ function couplesDivs() {
         let delButton = document.createElement("button");
         delButton.classList.add("couple-contents");
         delButton.classList.add("delete");
+        delButton.classList.add("btn")
+        delButton.classList.add("btn-secondary")
         delButton.innerHTML = "Delete";
         delButton.onclick = function() {
             deleteCouple(couples[i]);
