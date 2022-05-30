@@ -37,6 +37,7 @@ function couplesDivs() {
     for (let i = 0; i < couples.length; i++) {
         let couple = document.createElement("div");
         couple.classList.add("couple");
+        couple.classList.add("shadow")
         couple.setAttribute('id', `${couples[i].id}`)
 
         let father = document.createElement("p");

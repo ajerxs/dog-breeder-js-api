@@ -39,6 +39,7 @@ function puppiesDivs() {
     for (let i = 0; i < puppies.length; i++) {
         let puppy = document.createElement("div");
         puppy.classList.add("puppy");
+        puppy.classList.add("shadow")
         puppy.setAttribute('id', `${puppies[i].id}`);
 
         let name = document.createElement("p");
