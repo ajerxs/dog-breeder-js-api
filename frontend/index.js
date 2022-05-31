@@ -1,4 +1,5 @@
 let container = document.getElementById('container');
+let about = "This app is a Single Page Application designed to track pairs of dogs and their puppies for a dog breeder. This simple app can display, create, and delete couples and puppies using Javascript and Rails. The primary feature is using asynchronous calls through fetch to manipulate the DOM.";
 
 function clearPage() {
     let container = document.getElementById('container');
@@ -19,16 +20,14 @@ document.getElementById('about').addEventListener('click', function() {
     container.append(h2, p);
 });
 
-document.getElementById('user-comments-submit').addEventListener('click', function() {
-    clearPage();
-    let comments = document.getElementById('user-comments-div');
-    // comments.innerHTML = "";
+// document.getElementById('user-comments-submit').addEventListener('click', function() {
+//     clearPage();
+//     let comments = document.getElementById('user-comments-div');
+//     comments.innerHTML = "";
 
-    let p = document.createElement("p");
-    p.innerHTML = document.querySelector('form').elements[0].value;
+//     let p = document.createElement("p");
+//     p.innerHTML = document.querySelector('form').elements[0].value;
 
-    comments.append(p);
-    document.getElementById('user-comments-form').reset();
-})
-
-let about = "This app is a Single Page Application designed to track pairs of dogs and their puppies for a dog breeder. This simple app can display, create, and delete couples and puppies using Javascript and Rails. The primary feature is using asynchronous calls through fetch to manipulate the DOM.";
+//     comments.append(p);
+//     document.getElementById('user-comments-form').reset();
+// })

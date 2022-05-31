@@ -74,6 +74,8 @@ function puppiesDivs() {
     };
     let button = document.createElement("button");
     button.setAttribute('id', 'button');
+    button.classList.add("btn")
+    button.classList.add("btn-outline-info")
     button.innerHTML = "Create New!";
 
     container.appendChild(button);
