@@ -134,11 +134,19 @@ function makePuppyForm() {
         couple.add(opt); 
     };
 
-    let submit = document.createElement("input");
-    submit.classList.add("puppy-form");
+    // let submit = document.createElement("input");
+    // submit.classList.add("puppy-form");
+    // submit.setAttribute("id", "submit");
+    // submit.setAttribute("type", "submit");
+    // submit.setAttribute("value", "Submit");
+
+    let submit = document.createElement("button");
+    submit.type = "submit"
+    submit.innerHTML = "Submit"
+    submit.classList.add("couple-form");
+    submit.classList.add("btn");
+    submit.classList.add("btn-outline-info")
     submit.setAttribute("id", "submit");
-    submit.setAttribute("type", "submit");
-    submit.setAttribute("value", "Submit");
 
     form.append(name, br.cloneNode(), breed, br.cloneNode(), price, br.cloneNode(), sex, br.cloneNode(), couple, br.cloneNode(), submit);
     container.append(h2, form);

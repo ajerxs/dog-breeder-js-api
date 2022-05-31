@@ -112,11 +112,13 @@ function makeCoupleForm() {
     breed.setAttribute("name", "breed");
     breed.setAttribute("placeholder", "Breed");
 
-    let submit = document.createElement("input");
+    let submit = document.createElement("button");
+    submit.type = "submit"
+    submit.innerHTML = "Submit"
     submit.classList.add("couple-form");
+    submit.classList.add("btn");
+    submit.classList.add("btn-outline-info")
     submit.setAttribute("id", "submit");
-    submit.setAttribute("type", "submit");
-    submit.setAttribute("value", "Submit");
 
     form.append(father, br.cloneNode(), mother, br.cloneNode(), breed, br.cloneNode(), submit);
     container.append(h2, form);
