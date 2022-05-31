@@ -134,12 +134,6 @@ function makePuppyForm() {
         couple.add(opt); 
     };
 
-    // let submit = document.createElement("input");
-    // submit.classList.add("puppy-form");
-    // submit.setAttribute("id", "submit");
-    // submit.setAttribute("type", "submit");
-    // submit.setAttribute("value", "Submit");
-
     let submit = document.createElement("button");
     submit.type = "submit"
     submit.innerHTML = "Submit"

@@ -8,7 +8,7 @@ function clearPage() {
 
 document.getElementById('about').addEventListener('click', function() {
     clearPage();
-    
+
     let h2 = document.createElement("h2");
     h2.innerHTML = "About This App";
     h2.style.textAlign = "center";
@@ -19,15 +19,3 @@ document.getElementById('about').addEventListener('click', function() {
     p.innerHTML = about;
     container.append(h2, p);
 });
-
-// document.getElementById('user-comments-submit').addEventListener('click', function() {
-//     clearPage();
-//     let comments = document.getElementById('user-comments-div');
-//     comments.innerHTML = "";
-
-//     let p = document.createElement("p");
-//     p.innerHTML = document.querySelector('form').elements[0].value;
-
-//     comments.append(p);
-//     document.getElementById('user-comments-form').reset();
-// })

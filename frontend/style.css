@@ -39,3 +39,7 @@ a + a {
 .couple-form, .puppy-form {
     margin-bottom: 10px;
 }
+
+#dog {
+    margin-top: -50%;
+}
